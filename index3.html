@@ -13,15 +13,16 @@
   </script>
 <SCRIPT LANGUAGE="JavaScript">
 function testResults (form) {
-   var TestVar = form.content.value;
-   document.getElementById("demo").innerHTML = TestVar;
-//   show_results(TestVar);
+   var TestVar = tinyMCE.get('mytextarea').getContent();
+//   document.getElementById("demo").innerHTML = TestVar;
+   show_results(TestVar);
 
    
 }
 function show_results(result) {
-	document.getElementById("demo").innerHTML = result;
-//	document.write(result);
+//	tinyMCE.triggerSave();
+//	document.getElementById("demo").innerHTML = result;
+	document.write(result);
 }
 	
 </SCRIPT>
