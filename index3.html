@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC >
+
+<HTML>
+<HEAD>
+<TITLE>Test Input</TITLE>
+<script src='/techrockedge.github.io/js/tinymce/tinymce.min.js'></script>
+  <script>
+  tinymce.init({
+    selector: '#mytextarea',
+    toolbar: 'undo redo styleselect bold italic textcolor alignleft aligncenter alignright bullist numlist outdent indent code media link image',
+    plugins: 'code,media,autolink,link,textcolor,image'    
+  });
+  </script>
+<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+   var TestVar = form.content.value;
+   document.getElementById("demo").innerHTML = TestVar;
+//   show_results(TestVar);
+
+   
+}
+function show_results(result) {
+	document.getElementById("demo").innerHTML = result;
+//	document.write(result);
+}
+	
+</SCRIPT>
+
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">
+<textarea name="content" id="mytextarea">Hello, World!</textarea>
+
+<INPUT TYPE="button" NAME="button" Value="Generate" onClick="testResults(this.form)">
+</FORM>
+<div id="demo"></div> 
+</BODY>
+</HTML>
