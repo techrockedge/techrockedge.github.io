@@ -16,7 +16,7 @@
 
 <script type="text/javascript">
 function testResults (form) {
-    var TestVar = form.content.value;
+    var TestVar = form.mytextarea.value;
     document.getElementById("demo").innerHTML = TestVar;
 
 }
@@ -29,7 +29,7 @@ function testResults (form) {
 
 <form method="get" action="" name="myform">	  
     <textarea name="content" id="mytextarea">Hello, World!</textarea>
-    <INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+    <INPUT TYPE="button" NAME="button" Value="Generate" onClick="testResults(this.form)">
 
 </form>
 
