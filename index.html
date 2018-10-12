@@ -17,14 +17,10 @@
 <script type="text/javascript">
 function testResults (form) {
    var TestVar = tinyMCE.get('mytextarea').getContent();
-//   document.getElementById("demo").innerHTML = TestVar;
    show_results(TestVar);
-
    
 }
 function show_results(result) {
-//	tinyMCE.triggerSave();
-//	document.getElementById("demo").innerHTML = result;
 	document.write(result);
 }
 </script>
