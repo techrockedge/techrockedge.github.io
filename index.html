@@ -8,17 +8,33 @@
   <script>
   tinymce.init({
     selector: '#mytextarea',
-    toolbar: 'undo redo styleselect bold italic textcolor alignleft aligncenter alignright bullist numlist outdent indent code media',
-    plugins: 'code,media,autolink'    
+    toolbar: 'undo redo styleselect bold italic textcolor alignleft aligncenter alignright bullist numlist outdent indent code media link image',
+    plugins: 'code,media,autolink,link,textcolor,image'    
   });
   </script>
+
+
+<script type="text/javascript">
+function testResults (form) {
+    var TestVar = form.content.value;
+    document.getElementById("demo").innerHTML = TestVar;
+
+}
+</script>
+
 </head>
 
 <body>
 <h1>TinyMCE Quick Start</h1>
-  <form method="post">
-    <textarea id="mytextarea">Hello, World!</textarea>
-  </form>
+
+<form method="get" action="" name="myform">	  
+    <textarea name="content" id="mytextarea">Hello, World!</textarea>
+    <INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+
+</form>
+
+<div id="demo"></div> 
+
 </body>
 </html>
 
