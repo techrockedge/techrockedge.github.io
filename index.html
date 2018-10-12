@@ -3,9 +3,12 @@
 <head>
 <!--  <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script> -->
 <script src='/techrockedge.github.io/js/tinymce/tinymce.min.js'></script>
+<script src='/techrockedge.github.io/jquery/jquery-3.3.1.min.js'></script>
   <script>
   tinymce.init({
-    selector: '#mytextarea'
+    selector: '#mytextarea',
+    toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright bullist numlist outdent indent code',
+    plugins: 'code,media,autolink'    
   });
   </script>
 </head>
