@@ -16,16 +16,23 @@
 
 <script type="text/javascript">
 function testResults (form) {
-    var TestVar = form.mytextarea.value;
-    document.getElementById("demo").innerHTML = TestVar;
+   var TestVar = tinyMCE.get('mytextarea').getContent();
+//   document.getElementById("demo").innerHTML = TestVar;
+   show_results(TestVar);
 
+   
+}
+function show_results(result) {
+//	tinyMCE.triggerSave();
+//	document.getElementById("demo").innerHTML = result;
+	document.write(result);
 }
 </script>
 
 </head>
 
 <body>
-<h1>TinyMCE Quick Start</h1>
+<h1>TinyMCE Tests</h1>
 
 <form method="get" action="" name="myform">	  
     <textarea name="content" id="mytextarea">Hello, World!</textarea>
