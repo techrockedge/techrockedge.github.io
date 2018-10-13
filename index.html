@@ -3,13 +3,15 @@
 <head>
 	<title>techrockedge</title>
 <!--  <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script> -->
+<!--  <script src='/techrockedge.github.io/jquery/jquery-3.3.1.min.js'></script> -->
+
 <script src='/techrockedge.github.io/js/tinymce/tinymce.min.js'></script>
-<script src='/techrockedge.github.io/jquery/jquery-3.3.1.min.js'></script>
-  <script>
+<script>
   tinymce.init({
     selector: '#mytextarea',
-    toolbar: 'undo redo styleselect bold italic textcolor alignleft aligncenter alignright bullist numlist outdent indent code media link image',
-    plugins: 'code,media,autolink,link,textcolor,image'    
+    toolbar: 'undo redo styleselect bold italic textcolor alignleft aligncenter alignright \
+    bullist numlist outdent indent code media link forecolor backcolor image preview',
+    plugins: 'code,media,autolink,link,textcolor,image,imagetools,preview'    
   });
   </script>
 
@@ -18,7 +20,6 @@
 function testResults (form) {
    var TestVar = tinyMCE.get('mytextarea').getContent();
    show_results(TestVar);
-   
 }
 function show_results(result) {
 	document.write(result);
@@ -37,7 +38,7 @@ function show_results(result) {
 </form>
 
 <div id="demo"></div> 
-
+ 
 </body>
 </html>
 
