@@ -4,23 +4,28 @@
 <HEAD>
 <TITLE>Test Input</TITLE>
 <script src='/techrockedge.github.io/js/tinymce/tinymce.min.js'></script>
-<script type="text/javascript">
+  <script>
   tinymce.init({
     selector: '#mytextarea',
-    toolbar: 'undo redo styleselect bold italic textcolor alignleft aligncenter alignright bullist numlist outdent indent code media link image',
-    plugins: 'code,media,autolink,link,textcolor,image'    
+    toolbar: 'undo redo styleselect bold italic textcolor alignleft aligncenter alignright \
+    bullist numlist outdent indent code media link forecolor backcolor image preview',
+    plugins: 'code,media,autolink,link,textcolor,image imagetools,preview'
+   
   });
-</script>
+  </script>
+  
 <SCRIPT LANGUAGE="JavaScript">
 function testResults (form) {
    var TestVar = tinyMCE.get('mytextarea').getContent();
+//   document.getElementById("demo").innerHTML = TestVar;
    show_results(TestVar);
 
    
 }
 function show_results(result) {
+//	tinyMCE.triggerSave();
+//	document.getElementById("demo").innerHTML = result;
 	document.write(result);
-	document.close();
 }
 	
 </SCRIPT>
