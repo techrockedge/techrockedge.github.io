@@ -27,19 +27,32 @@ function show_results(result) {
 }
 </script>
 
+<style type="text/css">
+	body { background-color:#d0d0d0; font-family:sans-serif; padding:0 20px }
+	div.box { background-color:#f8f8f8; max-width:auto; margin:20px auto 50px; padding:50px; border-radius:10px; border:1px solid #808080; box-shadow:8px 15px 20px #404040 }
+	img.logo { float:right; margin:-10px 0 0 30px }
+	h1 { margin:0; font-size:24px }
+	h2 { margin-top:40px; font-size:20px; font-weight:normal; border-bottom:1px solid #ff9040 }
+	p { font-size:14px }
+	a { color:#6060d0; text-decoration:none }
+	a:hover { text-decoration:underline }
+	@media (max-width:499px) { div.box { padding:25px } img.logo { float:none; display:block; margin:0 auto 20px } }
+</style>
+
 </head>
 
 <body>
+<div class="box">	
 <h1>TinyMCE Tests</h1>
 
 <form method="get" action="" name="myform">	  
     <textarea name="content" id="mytextarea">Hello, World!</textarea>
-    <INPUT TYPE="button" NAME="button" Value="Generate" onClick="testResults(this.form)">
+<div style="padding:20px;" align="right"><INPUT TYPE="button" NAME="button" Value="Generate" onClick="testResults(this.form)"></div>
 
 </form>
 
 <div id="demo"></div> 
- 
+</div> 
 </body>
 </html>
 
